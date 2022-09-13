@@ -1,0 +1,10 @@
+.tamaño{
+    width: 30%;
+    height: 30%;
+}
+.titulo{
+    display: flex;
+}
+.botones{
+    display: flex;
+}
