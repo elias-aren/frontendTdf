@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="supermercado.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active bolded" aria-current="page" href="#">SUPERMERCADO TDF</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="comprar.html">comprar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactenos.html">contactenos</a>
+              </li>
+
+              <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  categorias
+                </a>
+                <ul class="dropdown-menu listado">
+                  <li><a class="dropdown-item" href="#">almacen</a></li>
+                  <li><a class="dropdown-item" href="#">lacteos</a></li>
+                  <li><a class="dropdown-item" href="#">perfumeria y limpieza</a></li>
+                  <li><a class="dropdown-item" href="#">congelados</a></li>
+                  <li><a class="dropdown-item" href="#">comidas preparadas</a></li>
+                  <li><a class="dropdown-item" href="#">carnes</a></li>
+                  <li><a class="dropdown-item" href="#">frutas y verduras</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">panaderia</a></li>
+                </ul>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <!--carrusel-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="jumbo1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="jumbo2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="jumbo3.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+          <img src="jumbo5.png" class="d-block w-100" alt="...">
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--fin carrusel-->
+      <div class="fondo">
+      <h2 class="text-center">Productos destacados</h2>
+    </div>
+
+      <!--tarjetas de imagenes y textos-->
+      <div class="tarjetas">
+      <div class="card" style="width: 18rem;">
+        <img src="tarjeta1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="tarjeta2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="tarjeta3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="tarjeta4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+      <!--fin de imagenes de tarjetas y textos-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

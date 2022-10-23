@@ -1,0 +1,27 @@
+.carousel-inner{
+    max-height: 30rem;
+    background-color: aqua;
+}
+.titulos{
+    display: auto;
+    justify-content: center;
+    align-content: center;
+
+}
+.listado{
+    background-color:royalblue ;
+}
+.tarjetas{
+    display: flex;
+    margin-top: 35px;
+    margin-right: auto;
+}
+.bolded{
+    font-weight: bold;
+}
+.fondo{
+    background-color: aqua;
+}
+.fondoContacto{
+    background-color: aquamarine;
+}
