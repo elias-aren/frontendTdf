@@ -1,27 +1,27 @@
 import { Persona } from "./persona";
-export class Futbolista{
+export class Futbolista {
     persona: Persona;
     posicion: string;
-    club:string;
+    club: string;
 
 
-    constructor(paramPersona:Persona,paramPosicion:string,paramClub:string){
-        this.persona=paramPersona;
-        this.posicion=paramPosicion;
-        this.club=paramClub;
+    constructor(paramPersona: Persona, paramPosicion: string, paramClub: string) {
+        this.persona = paramPersona;
+        this.posicion = paramPosicion;
+        this.club = paramClub;
     }
 
-    Obtenerposicion():string{
+    Obtenerposicion(): string {
         return this.posicion;
 
     }
-    ObtnerClub():string{
+    ObtnerClub(): string {
         return this.club;
     }
-    cambiarPosicion(paramNPosicion:string):void{
-        this.posicion=paramNPosicion;
+    cambiarPosicion(paramNPosicion: string): void {
+        this.posicion = paramNPosicion;
     }
-    cambiarClub(paramNClub:string):void{
-        this.club=paramNClub;
+    cambiarClub(paramNClub: string): void {
+        this.club = paramNClub;
     }
 }
