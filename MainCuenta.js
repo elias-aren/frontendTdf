@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var cuentaCorriente_1 = require("./cuentaCorriente");
+var persona_1 = require("./persona");
+var Julian = new persona_1.Persona("Julian", "Rodriguez", 26543345, "09/02/76");
+var Pepe = new persona_1.Persona("Pepe", "Cibrian", 15980987, "01/09/54");
+var cuentaCorrientePepito = new cuentaCorriente_1.cuentaCorriente(Pepe, 15);
+cuentaCorrientePepito.setSaldo(1000);
+cuentaCorrientePepito.ingresarDinero(2000);
+cuentaCorrientePepito.retirarDinero(900);
+cuentaCorrientePepito.actualizarSaldo();

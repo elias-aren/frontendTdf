@@ -1,16 +1,14 @@
 export class Persona{
    private nombre:string;
    private apellido:string;
-   private dni:number;
-   private email: string;
+   private pasaporte:number;
    private fechaDeNacimiento: string;
 
-   public constructor(paramNombre:string,paramApellido:string,paramDni:number
-    ,paramEmail:string,paramFecha:string){
+   public constructor(paramNombre:string,paramApellido:string,paramPasaporte:number
+    ,paramFecha:string){
       this.nombre= paramNombre;
       this.apellido=paramApellido;
-      this.dni= paramDni;
-      this.email=paramEmail;
+      this.pasaporte= paramPasaporte;
       this.fechaDeNacimiento=paramFecha;
    }
 
@@ -20,14 +18,11 @@ export class Persona{
    public getApellido():string{
        return this.apellido;
    }
-   public getDni():number{
-       return this.dni;
+   public getPasaporte():number{
+       return this.pasaporte;
    }
-   public getEmail():string{
-       return this.email;
+   public getNacimiento():string{
+      return this.fechaDeNacimiento;
    }
 
 }
-let persona1: Persona= new Persona("Elias","Arenas",29629349,"eliasarenas898@gmail.com","01/09/82")
-console.log(persona1.getDni());
-console.log(persona1);

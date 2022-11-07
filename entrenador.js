@@ -1,39 +1,53 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 exports.__esModule = true;
 exports.Entrenador = void 0;
 var persona_1 = require("./persona");
-var Entrenador = /** @class */ (function (_super) {
-    __extends(Entrenador, _super);
-    function Entrenador(paramPersona, paramReLaboral, paramPJ, paramEficiencia, paramTactico) {
-        var _this = _super.call(this, persona_1.Persona, paramReLaboral, paramPJ, paramEficiencia, paramTactico) || this;
-        _this.persona = paramPersona;
-        _this.relacionLaboral = paramReLaboral;
-        _this.pj = paramPJ;
-        _this.eficiencia = paramEficiencia;
-        _this.sistTactico = paramTactico;
-        return _this;
+var futbolista_1 = require("./futbolista");
+var Entrenador = /** @class */ (function () {
+    function Entrenador(paramPersona, paramSistemaTactico, paramEfc, paramPj, paramRl, paramLista) {
+        this.persona = paramPersona;
+        this.relacionLaboral = paramRl;
+        this.pj = paramPj;
+        this.eficiencia = paramEfc;
+        this.sistTactico = paramSistemaTactico;
+        this.listadoDjugadores = paramLista;
     }
-    Entrenador.prototype.getSistmatactico = function (paramTactico) {
-        return this.sistTactico = paramTactico;
+    Entrenador.prototype.getEntrenador = function (persona) {
+        return persona;
+    };
+    Entrenador.prototype.setSistmatactico = function (paramTactico) {
+        this.sistTactico = paramTactico;
+    };
+    Entrenador.prototype.getSistemaTactico = function () {
+        return this.sistTactico;
+    };
+    Entrenador.prototype.convocarFutbolistas = function (defensor) {
+        this.listadoDjugadores.push(defensor);
+    };
+    Entrenador.prototype.contarlistado = function () {
+        return this.listadoDjugadores.length;
+    };
+    Entrenador.prototype.getEficiencia = function () {
+        return this.eficiencia;
+    };
+    Entrenador.prototype.setEficiencia = function (paramEfc) {
+        this.eficiencia = paramEfc;
+    };
+    Entrenador.prototype.getListadoDeJugadores = function () {
+        var arregloFutbolistas;
+        for (var index = void 0; index < this.contarlistado(); index++) {
+            var pos = this.listadoDjugadores[index].Obtenerposicion();
+            var club = this.listadoDjugadores[index].ObtnerClub();
+            var nombre = this.listadoDjugadores[index].persona.getNombre();
+            var apellido = this.listadoDjugadores[index].persona.getApellido();
+            var pasaport = this.listadoDjugadores[index].persona.getPasaporte();
+            var fecha = this.listadoDjugadores[index].persona.getNacimiento();
+            var datosDeFutbolista = new persona_1.Persona(nombre, apellido, pasaport, fecha);
+            var jugador5 = new futbolista_1.Futbolista(datosDeFutbolista, pos, club);
+            arregloFutbolistas.push(jugador5);
+        }
+        return arregloFutbolistas;
     };
     return Entrenador;
-}(persona_1.Persona));
+}());
 exports.Entrenador = Entrenador;
-var datosEntrenador = new persona_1.Persona("elias", "arenas", 29629349, "eliasarenas898@gmail.com", "01/02/79");
-var entrenador = new Entrenador(datosEntrenador, "contratado", 5, 50, "1-4-3-1-2");
-console.log(entrenador);

@@ -2,11 +2,10 @@
 exports.__esModule = true;
 exports.Persona = void 0;
 var Persona = /** @class */ (function () {
-    function Persona(paramNombre, paramApellido, paramDni, paramEmail, paramFecha) {
+    function Persona(paramNombre, paramApellido, paramPasaporte, paramFecha) {
         this.nombre = paramNombre;
         this.apellido = paramApellido;
-        this.dni = paramDni;
-        this.email = paramEmail;
+        this.pasaporte = paramPasaporte;
         this.fechaDeNacimiento = paramFecha;
     }
     Persona.prototype.getNombre = function () {
@@ -15,15 +14,12 @@ var Persona = /** @class */ (function () {
     Persona.prototype.getApellido = function () {
         return this.apellido;
     };
-    Persona.prototype.getDni = function () {
-        return this.dni;
+    Persona.prototype.getPasaporte = function () {
+        return this.pasaporte;
     };
-    Persona.prototype.getEmail = function () {
-        return this.email;
+    Persona.prototype.getNacimiento = function () {
+        return this.fechaDeNacimiento;
     };
     return Persona;
 }());
 exports.Persona = Persona;
-var persona1 = new Persona("Elias", "Arenas", 29629349, "eliasarenas898@gmail.com", "01/09/82");
-console.log(persona1.getDni());
-console.log(persona1);

@@ -1,0 +1,10 @@
+"use strict";
+export const __esModule = true;
+import { Seleccion } from "./seleccionDeFutbol";
+import { Futbolista } from "./futbolista";
+import { Persona } from "./persona";
+var seleccionadoDeFutbol = new Seleccion;
+var datosDefutbolista1 = new Persona("facundo", "Alvarez", 332345, "01/09/89");
+var futbolista1 = new Futbolista(datosDefutbolista1, "defensor", "lanus");
+seleccionadoDeFutbol.convocarFutbolista(futbolista1);
+console.log(seleccionadoDeFutbol.toString());
